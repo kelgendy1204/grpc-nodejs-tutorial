@@ -15,7 +15,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 const sum_proto = grpc.loadPackageDefinition(packageDefinition);
 
 function sum(call, callback) {
-    const response = new protoSum.Response(); 
+    const response = new protoSum.Response();
     response.setSum(call.request.num1 + call.request.num2);
     callback(null, response.toObject());
 }

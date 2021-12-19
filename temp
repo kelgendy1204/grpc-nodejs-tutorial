@@ -1,0 +1,19 @@
+k = 2
+N = 210
+while N > 1:
+    if N % k == 0:   // if k evenly divides into N
+        print k      // this is a factor
+        N = N / k    // divide N by k so that we have the rest of the number left.
+    else:
+        k = k + 1
+
+===============================================
+
+ComputeAverage RPC Client Streaming API:
+The client will send a stream of number (1,2,3,4) and the server will respond with (2.5), because (1+2+3+4)/4 = 2.5 
+
+===============================================
+
+Implement a FindMaximum RPC Bi-Directional Streaming API in a CalculatorService:
+The function takes a stream of Request message that has one integer, and returns a stream of Responses that represent the current maximum between all these integers
+The client will send a stream of number (1,5,3,6,2,20) and the server will respond with a stream of (1,5,6,20)
